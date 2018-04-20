@@ -36,6 +36,17 @@ function toggleOpertion() {
   }
 }
 
+function functionSwitch(event) {
+  switch(event.which) {
+    case 1: // Left-click
+      cycleColor();
+      break;
+    case 3: // Right-Click
+      removeAll();
+      break;
+  }
+}
+
 function counterDot(xPos, yPos) {
   this.dotId = "dot_" + createdDots++;
   this.xPosition = xPos;
@@ -148,7 +159,7 @@ function addGui() {
   counterBox.style.background = "#696969";
   counterBox.style.position = "fixed";
   counterBox.style.zIndex = "512";
-	counterBox.onclick = cycleColor;
+	counterBox.onclick = functionSwitch(e);
 	counterBox.title = "LeftClick: place dot | RightClick: Remove selected dot | MiddleClick: Remove all dots | Click this counter to change colour";
 	document.body.appendChild(counterBox);
 
