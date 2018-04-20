@@ -159,7 +159,7 @@ function addGui() {
   counterBox.style.background = "#696969";
   counterBox.style.position = "fixed";
   counterBox.style.zIndex = "512";
-	counterBox.addEventListener("mousedown", functionSwitch;
+	counterBox.addEventListener("mousedown", functionSwitch);
 	counterBox.title = "LeftClick: place dot | RightClick: Remove selected dot | MiddleClick: Remove all dots | Click this counter to change colour";
 	document.body.appendChild(counterBox);
 
